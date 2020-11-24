@@ -53,13 +53,18 @@ nlu:
 
 - intent: book_rooms
     examples: |
-    - please book rooms
+    - please book [1](num_room) rooms
     - please book a room
     - I want to book a room
-    - Book Rooms
-    - book room
-    - Book room
+    - Book [5](num_room) Rooms
+    - book room for [2](num_people) persons
     - can you book room
+
+- intent: num_rooms
+  examples: |
+  - [3](num_room) roooms
+  - single room
+
 
 - intent: deluxe_room
     examples: |
@@ -77,11 +82,11 @@ nlu:
     - BOOK NOW
     - book now
 
-- intent: clean_room_now
+- intent: clean_room
     examples: |
-    - clean Now
-    - clean NOW
-    - clean now
+    - clean my room in [2](hours)
+    - get my room cleaned by [5:00 PM](time) 
+    - get the room cleaned up in [1](hours)
 
 - intent: faqbreakfast
     examples: |
@@ -89,6 +94,12 @@ nlu:
     - morning breakfast ?
     - free breakfast offered ?
     - complimentary breakfast ?
+
+- intent: faqcancelroom
+    examples: |
+    - how to cancel the booking
+    - cancel the rooom booking
+    - cancel resevation
 
 - intent: faqcancellationpolicy
     examples: |
